@@ -1,0 +1,33 @@
+<div data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.LearnMoreModel" class="cmp-headerComponent" >
+  
+  <div class="cmp-divLeft" style="justify-content: center; text-align: start">
+    <h1>${model.title}</h1>
+    <p>${model.text}</p>
+
+
+    <button 
+    style="
+    background-color: black;
+    color: white;text-decoration: none;
+    display: flex;
+    margin-top: 5em;
+    width: 180px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;"
+    data-sly-use.button="com.adobe.cq.wcm.core.components.models.Button"
+    data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+    data-sly-element="${button.link ? 'a' : 'button'}"
+    type="${button.link ? '' : 'button'}"
+    href="${button.link}"
+    aria-label="${button.accessibilityLabel}"
+    data-cmp-clickable="${button.data ? true : false}">
+    <span  class="cmp-button__text">Learn More</span>
+    </button>
+  </div>
+
+  <div data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image" class="cmp-divRight">
+    <img src="${model.image}" alt="" />
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div style="justify-content: center; text-align: center;
+color: #000011;
+text-decoration: none;"
+data-sly-use.title="com.adobe.cq.wcm.core.components.models.Title"
+data-sly-element="${title.type}"
+>
+<a
+  href="${title.linkURL}">
+  <div
+    data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.CategoryModel"
+    data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"
+  >
+
+      <img src="${model.categoryImg}" alt="" />
+  </div>
+
+  <div>
+    <p>${model.categoryName}</p>
+  </div>
+
+</a>
+</div>

@@ -1,0 +1,29 @@
+.cmp-learnMoreComponent {
+    display:  flex;
+    border-radius: 8px;
+    background-color:  #e7fafe;
+}
+
+.img{
+    border-radius: 50%!important;
+}
+.cmp-divLeft{
+    align-items: flex-end;
+    width: 40%;
+    margin-top: 9em;
+}
+
+.cmp-divRight{
+    align-items: flex-start;
+    width: 30%;
+}
+
+
+.cmp-button{
+    border-radius: 2px;
+    background-color:#dbedf1
+}
+
+.cmp-bgWhite{
+    background-color: white;
+}

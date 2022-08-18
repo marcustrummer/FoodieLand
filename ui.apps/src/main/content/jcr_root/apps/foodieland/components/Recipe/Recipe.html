@@ -1,0 +1,18 @@
+<div data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.RecipeModel"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
+     <div data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"
+     data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.RecipeModel">
+      <a href="${image.link}">
+        <img src="${model.recipeImg}" alt="ergwerrggrwwer"  />
+      </a>
+     </div>
+  <h1 style="font-size: 1.5em">${model.title}</h1>
+
+  <button>
+    <p>${model.tag1}</p>
+
+  </button>
+  <button>
+    <p>${model.tag2}</p>
+  </button>
+</div>

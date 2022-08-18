@@ -1,0 +1,104 @@
+<div
+  data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.HeaderComponentModel"
+  class="cmp-learnMoreComponent"
+>
+  <div class="cmp-divLeft">
+    <h1 data-cmp-hook-helloworld="property" style="color: black">
+      ${model.title}
+    </h1>
+
+    <button data-sly-test="${model.isHotRecipe}" class="cmp-button cmp-bgWhite">
+      Hot Recipe
+    </button>
+    <p style="color: rgb(92, 100, 102)">${model.text}</p>
+    <div class="align-items: center">
+      <button>${model.typeofMeat}</button>
+      <button>${model.cookTime}</button>
+
+      <div
+        data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.UserModel"
+        style="
+          color: black;
+          justify-content: space-between;
+          flex-direction: row;
+          display: flex;
+        "
+      >
+        <div
+          style="display: flex; margin-top: 1em"
+          data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.UserModel"
+        >
+          <div
+            style="width: 30%"
+            data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"
+            id="divDaImagemUsuario"
+          >
+            <img
+              style="
+              border-radius: 50%;
+              width: 50px;
+              height: 50px"
+              src="${model.profilePicture}"
+              alt=""
+            />
+          </div>
+          <div style="margin-right: 2.3em">
+            <p style="display: flex; margin: 0px !important">${model.name}</p>
+            <div
+              data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.RecipeModel"
+            >
+              <p style="margin-top: 0%;
+              font-size: 0.9em;">${model.date}</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            style="
+              background-color: black;
+              color: white;
+              text-decoration: none;
+              display: flex;
+              width: 180px;
+              height: 60px;
+              align-items: center;
+              justify-content: center;
+              border-radius: 16px;
+              margin-top: 1em;
+            "
+            data-sly-use.button="com.adobe.cq.wcm.core.components.models.Button"
+            data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+            data-sly-element="${button.link ? 'a' : 'button'}"
+            type="${button.link ? '' : 'button'}"
+            href="${button.link}"
+            aria-label="${button.accessibilityLabel}"
+            data-cmp-clickable="${button.data ? true : false}"
+          >
+            <span class="cmp-button__text">View Recipes</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.HeaderComponentModel"
+  >
+    <img
+      style="width: 300px; margin: 0px; padding: 0px"
+      data-sly-test="${model.handPickedRecipeImg}"
+      src="${model.handPickedRecipeImg}"
+      alt=""
+    />
+  </div>
+
+  <div
+    class="cmp-divRight"
+    data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.HeaderComponentModel"
+  >
+    <img
+      data-sly-test="${model.image2Reference}"
+      src="${model.image2Reference}"
+      alt=""
+    />
+  </div>
+</div>

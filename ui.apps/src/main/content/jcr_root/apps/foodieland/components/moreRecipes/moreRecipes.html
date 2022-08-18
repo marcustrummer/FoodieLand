@@ -1,0 +1,20 @@
+
+<div data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.MoreRecipesModel">
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+
+    
+    <h1>
+        ${model.title}
+    </h1>
+
+    <p>
+        ${model.text}
+    </p>
+
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <sly  data-sly-resource="${'nome do componente' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+    </div>
+</div>

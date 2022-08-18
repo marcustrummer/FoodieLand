@@ -1,0 +1,48 @@
+<div data-sly-use.model="com.adobe.aem.guides.foodieland.core.models.InstagramModel">
+<div
+data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+style="justify-content: center; text-align: center"
+>
+<h1>${model.title}</h1>
+<p>${model.text}</p>
+</div>
+
+
+<div
+  data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"
+>
+  <a href="${image.link}">
+    <img src="${model.instagramImg}" alt="" />
+  </a>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <sly  data-sly-resource="${'nome do componente' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+</div>
+
+
+
+
+<div style="justify-content: space-around; text-align: center">
+  <button 
+  style="
+  background-color: black;
+  color: white;text-decoration: none;
+  display: flex;
+  margin-top: 5em;
+  width: 180px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;"
+  data-sly-use.button="com.adobe.cq.wcm.core.components.models.Button"
+  data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+  data-sly-element="${button.link ? 'a' : 'button'}"
+  type="${button.link ? '' : 'button'}"
+  href="${button.link}"
+  aria-label="${button.accessibilityLabel}"
+  data-cmp-clickable="${button.data ? true : false}">
+  <span  class="cmp-button__text">Visit our Instagram</span>
+  </button>
+</div>
+</div>
